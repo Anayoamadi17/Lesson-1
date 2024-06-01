@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .container {
+                font-size: 30px;
+                text-align: center;
+                background-color: aqua;
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+            .tooltip {
+                font-size: 18px;
+                background-color: black;
+                color: white;
+                position: absolute;
+                padding: 2px 6px;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                opacity: 0;
+                z-index: 10;
+                pointer-events: none;
+                transition: opacity 2s;
+            }
+
+            .container:hover .tooltip {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            Hover over me
+            <div class="tooltip">
+                I`m hidden
+            </div>
+        </div>
+        
+        <div>
+            <button class="container">
+                Hover over me
+                <div class="tooltip">
+                    I`m hidden
+                </div>
+            </button>
+        </div>
+
+        <div style="margin-bottom: 50px;">
+            <button class="container">submit
+              <div class="tooltip">click to submit</div>
+            </button>
+          </div>
+    </body>
+</html>
